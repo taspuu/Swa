@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#100b18">
+  <meta name="description" content="A small birthday story made with love.">
+  <title>A little something for you</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div id="particle-layer" class="particle-layer" aria-hidden="true"></div>
+
+  <button id="music-toggle" class="music-toggle" type="button" aria-label="Play our song" aria-pressed="false">
+    <span class="music-icon">♫</span><span class="music-label">Our song</span>
+  </button>
+  <audio id="our-song" preload="none" src="audio/our-song.mp3"></audio>
+
+  <main>
+    <section id="intro" class="intro section-shell" aria-labelledby="intro-title">
+      <div class="intro-content">
+        <p class="eyebrow intro-line line-one">Hey, you <span aria-hidden="true">♥</span></p>
+        <h1 id="intro-title" class="intro-line line-two">I made something<br>for you.</h1>
+        <p class="intro-line line-three">But before we begin...</p>
+        <button id="promise-button" class="button primary intro-line line-four" type="button">I promise <span aria-hidden="true">🥺</span></button>
+      </div>
+      <p class="tiny-note">made especially for you</p>
+    </section>
+
+    <section id="birthday" class="birthday section-shell hidden-section" aria-labelledby="birthday-title">
+      <div class="section-content centered">
+        <p class="eyebrow">a day worth celebrating</p>
+        <div class="birthday-orbit" aria-hidden="true"><span>✦</span><span>♥</span><span>✦</span></div>
+        <h2 id="birthday-title">Happy Birthday,<br><em data-her-name>Adiba Tabassum Swa</em> <span class="heart">♥</span></h2>
+        <p class="lead">Today isn't just another day.</p>
+        <p>It's the day someone very special came into this world.</p>
+        <p class="soft-message" data-birthday-message>And I wanted to make you something instead of just saying it.</p>
+        <button class="button primary next-button" type="button" data-next="story">There's more <span aria-hidden="true">→</span></button>
+      </div>
+    </section>
+
+    <section id="story" class="story section-shell hidden-section" aria-labelledby="story-title">
+      <div class="section-content">
+        <p class="eyebrow">chapter one</p>
+        <h2 id="story-title">A little story<br>called <em>us.</em></h2>
+        <p class="section-intro">Tap a moment to open it.</p>
+        <div id="timeline" class="timeline" aria-label="Our memories"></div>
+        <button class="button ghost next-button" type="button" data-next="gallery">See the little moments <span aria-hidden="true">↓</span></button>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery section-shell hidden-section" aria-labelledby="gallery-title">
+      <div class="section-content">
+        <p class="eyebrow">a few frames i adore</p>
+        <h2 id="gallery-title">Us, in little<br><em>snapshots.</em></h2>
+        <p class="section-intro">Tap a photo to see it closer.</p>
+        <div id="photo-gallery" class="photo-gallery" aria-label="Photo memories"></div>
+        <button class="button primary next-button" type="button" data-next="love">A few things I love <span aria-hidden="true">→</span></button>
+      </div>
+    </section>
+
+    <section id="love" class="love section-shell hidden-section" aria-labelledby="love-title">
+      <div class="section-content">
+        <p class="eyebrow">the small things</p>
+        <h2 id="love-title">Things I probably<br>don't say <em>enough...</em></h2>
+        <p class="section-intro">Each one is a little reminder. Tap to unfold it.</p>
+        <div id="love-cards" class="love-cards"></div>
+        <button class="button ghost next-button" type="button" data-next="question">One important question <span aria-hidden="true">→</span></button>
+      </div>
+    </section>
+
+    <section id="question" class="question section-shell hidden-section" aria-labelledby="question-title">
+      <div class="section-content centered">
+        <p class="eyebrow">a very serious question</p>
+        <div class="small-heart" aria-hidden="true">♥</div>
+        <h2 id="question-title">Okay, I have one<br><em>important</em> question...</h2>
+        <p class="big-question">Will you stay with me for another thousand years? <span class="heart">♥</span></p>
+        <div class="choice-buttons">
+          <button id="yes-button" class="button primary choice" type="button">YES <span aria-hidden="true">♥</span></button>
+          <button id="obvious-button" class="button secondary choice" type="button">Obviously <span aria-hidden="true">🙄</span></button>
+        </div>
+        <p id="choice-response" class="choice-response" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section id="letter" class="letter section-shell hidden-section" aria-labelledby="letter-title">
+      <div class="section-content">
+        <p class="eyebrow">from my heart</p>
+        <article class="letter-paper">
+          <p class="letter-top">for <span data-her-name>HER NAME</span>, always</p>
+          <h2 id="letter-title">Okay...<br><em>jokes aside.</em></h2>
+          <div id="letter-content" class="letter-content"></div>
+          <p class="signature" data-my-name>MY NAME</p>
+        </article>
+        <button class="button primary next-button" type="button" data-next="final">One last thing <span aria-hidden="true">→</span></button>
+      </div>
+    </section>
+
+    <section id="final" class="final section-shell hidden-section" aria-labelledby="final-title">
+      <div id="final-before" class="section-content centered">
+        <p class="eyebrow">the last page</p>
+        <h2 id="final-title">One last<br><em>thing...</em></h2>
+        <button id="surprise-button" class="button primary" type="button">Open this only if<br>you're smiling <span aria-hidden="true">♥</span></button>
+      </div>
+      <div id="final-message" class="final-message" hidden aria-live="polite">
+        <div class="growing-heart" aria-hidden="true">♥</div>
+        <p class="eyebrow">for you, today and always</p>
+        <h2>Happy Birthday,<br><em data-her-name>HER NAME</em>. <span class="heart">♥</span></h2>
+        <p>I don't know exactly what the future looks like.</p>
+        <p>But I know I'm really happy that you're part of my present.</p>
+        <p>Here's to another year of us.</p>
+        <p class="love-you">I love you.</p>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="photo-modal" class="photo-modal" aria-labelledby="modal-caption">
+    <button id="modal-close" class="modal-close" type="button" aria-label="Close photo">×</button>
+    <img id="modal-image" src="" alt="">
+    <p id="modal-caption"></p>
+  </dialog>
+  <script src="js/script.js"></script>
+</body>
+</html>
